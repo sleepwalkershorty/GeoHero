@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="de.nrg.geohero.ActivityMain$PlaceholderFragment"
+    >
+
+    <LinearLayout
+        android:id="@+id/botLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#484848"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <TextView
+            android:id="@+id/tv_errors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/errors"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f7f7f7"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f7f7f7"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0/47"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f7f7f7"
+            android:fontFamily="sans-serif-condensed" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/midLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botLay"
+        android:layout_below="@+id/topLine"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:src="@drawable/europe_mask2"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:src="@drawable/europe"
+            android:visibility="invisible" />
+
+        <de.nrg.geohero.TouchImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/europe_mask2"
+            android:visibility="invisible" />
+
+        <de.nrg.geohero.TouchImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:src="@drawable/europe"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#484848"
+        android:orientation="vertical"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <TextView
+            android:id="@+id/tv_command"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/command_find"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#f7f7f7"
+            android:textSize="32sp"
+            android:fontFamily="sans-serif-condensed" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/botLay"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:background="#33B5E5" />
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/topLay"
+        android:background="#33B5E5" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#444444"
+        android:alpha="0.80"
+        android:id="@+id/overLay">
+
+    </FrameLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbLoading"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/loading"
+        android:id="@+id/tvLoading"
+        android:layout_below="@+id/pbLoading"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="sans-serif-condensed" />
+
+</RelativeLayout>

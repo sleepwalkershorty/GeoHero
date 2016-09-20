@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "379160699239",
+    "firebase_url": "https://admob-app-id-3770167940.firebaseio.com",
+    "project_id": "admob-app-id-3770167940",
+    "storage_bucket": "admob-app-id-3770167940.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379160699239:android:4a1df34842f87af7",
+        "android_client_info": {
+          "package_name": "de.nrg.geohero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379160699239-vtvbt9pn1tumjf191ngb5r1dbft164d4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.nrg.geohero",
+            "certificate_hash": "394003679BC745AD14157A2DB7E719412EFAE2E9"
+          }
+        },
+        {
+          "client_id": "379160699239-710ujqkafiginj85c8p33ci6g9v7fp98.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDls5SbjEstE6qPM874LogizrEqB8d6isk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

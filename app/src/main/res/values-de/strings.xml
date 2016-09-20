@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Geo Hero</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="command_find">Finde:</string>
+    <string name="errors">Fehler:</string>
+    <string name="game_finished">Spiel beendet!</string>
+    <string name="time">Zeit:</string>
+    <string name="toast_superb">Super!!!</string>
+    <string name="new_game">Neues Spiel</string>
+    <string name="exit">Beenden</string>
+    <string name="loading">Spiel lädt ...</string>
+    <string name="open_highscores">Highscores</string>
+    <string name="dialog_name_cancel">Abbrechen</string>
+    <string name="dialog_name_edHint">Dein Name</string>
+    <string name="dialog_name_msg">Glückwunsch!\nDu hast es in die Highscores geschafft!\n\nBitte trage deinen Namen ein!</string>
+    <string name="dialog_name_ok">OK</string>
+    <string name="dialog_name_title">Dein Name</string>
+    <string name="dialog_name_toast1">Bitte trage deinen Namen ein! (Min. 2 Zeichen)</string>
+    <string name="dialog_name_toast2">Highscore Eintrag erstellt!</string>
+    <string name="points">Punkte:</string>
+    <string name="dialog_name_msg2">Du hast es leider nicht in die Highscores geschafft! Versuche es weiter!</string>
+    <string name="dialog_name_title2">Schade</string>
+    <string name="bAfrica">Afrika</string>
+    <string name="bEurope">Europa</string>
+</resources>
