@@ -83,6 +83,8 @@ public class ActivityMain extends Activity
 		setContentView(R.layout.layout_activity_main);
 		ctx = this;
 
+		this.getActionBar().setDisplayHomeAsUpEnabled(true);
+
 		countries = MyApplication.countries;
 
 		if (MyApplication.isTablet(ctx))

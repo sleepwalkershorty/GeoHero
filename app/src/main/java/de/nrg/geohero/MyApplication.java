@@ -73,19 +73,19 @@ public class MyApplication extends Application
 
     private void buildDatabaseNew()
     {
-        for (int i = 0; i < countries.size(); i++)
-        {
-            if (countries.get(i).getCapitol_en() != null)
-                datasource.createCountry(countries.get(i).getName(), countries.get(i).getName_eng(),
-                        countries.get(i).getContinent(), countries.get(i).getAbbr(),
-                        countries.get(i).getCapitol(), countries.get(i).getCapitol_en(), countries.get(i).getArea(), countries.get(i).getPopulation(),
-                        countries.get(i).getPop_density(), countries.get(i).getColor());
-            else
-                datasource.createCountry(countries.get(i).getName(), countries.get(i).getName_eng(),
-                        countries.get(i).getContinent(), countries.get(i).getAbbr(),
-                        countries.get(i).getCapitol(), countries.get(i).getCapitol(), countries.get(i).getArea(), countries.get(i).getPopulation(),
-                        countries.get(i).getPop_density(), countries.get(i).getColor());
-        }
+//        for (int i = 0; i < countries.size(); i++)
+//        {
+//            if (countries.get(i).getCapitol_en() != null)
+//                datasource.createCountry(countries.get(i).getName(), countries.get(i).getName_eng(),
+//                        countries.get(i).getContinent(), countries.get(i).getAbbr(),
+//                        countries.get(i).getCapitol(), countries.get(i).getCapitol_en(), countries.get(i).getArea(), countries.get(i).getPopulation(),
+//                        countries.get(i).getPop_density(), countries.get(i).getColor());
+//            else
+//                datasource.createCountry(countries.get(i).getName(), countries.get(i).getName_eng(),
+//                        countries.get(i).getContinent(), countries.get(i).getAbbr(),
+//                        countries.get(i).getCapitol(), countries.get(i).getCapitol(), countries.get(i).getArea(), countries.get(i).getPopulation(),
+//                        countries.get(i).getPop_density(), countries.get(i).getColor());
+//        }
 
 //        datasource.createCountry("Ägypten","Egypt",1,"EGY","Kairo","Cairo",1001450,80722000,81,0);
         ArrayList<Country> list1 = datasource.getAllCountries(0);
@@ -675,5 +675,661 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).population = 829;
         countries.get(countries.size() - 1).pop_density = 1884;
         countries.get(countries.size() - 1).color = -14462929;
+
+        //Africa
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Ägypten";
+        countries.get(countries.size() - 1).name_eng = "Egypt";
+        countries.get(countries.size() - 1).abbr = "EGY";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Kairo";
+        countries.get(countries.size() - 1).capitol_en = "Cairo";
+        countries.get(countries.size() - 1).area = 1001450;
+        countries.get(countries.size() - 1).population = 80722000;
+        countries.get(countries.size() - 1).pop_density = 81;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Algerien";
+        countries.get(countries.size() - 1).name_eng = "Algeria";
+        countries.get(countries.size() - 1).abbr = "DZA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Algier";
+        countries.get(countries.size() - 1).capitol_en = "Algiers";
+        countries.get(countries.size() - 1).area = 2381741;
+        countries.get(countries.size() - 1).population = 38482000;
+        countries.get(countries.size() - 1).pop_density = 16;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Angola";
+        countries.get(countries.size() - 1).name_eng = "Angola";
+        countries.get(countries.size() - 1).abbr = "AGO";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Luanda";
+        countries.get(countries.size() - 1).area = 1246700;
+        countries.get(countries.size() - 1).population = 20821000;
+        countries.get(countries.size() - 1).pop_density = 17;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Äquatorialguinea";
+        countries.get(countries.size() - 1).name_eng = "Equatorial Guinea";
+        countries.get(countries.size() - 1).abbr = "GNQ";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Malabo";
+        countries.get(countries.size() - 1).area = 28051;
+        countries.get(countries.size() - 1).population = 736000;
+        countries.get(countries.size() - 1).pop_density = 26;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Äthiopien";
+        countries.get(countries.size() - 1).name_eng = "Ethopia";
+        countries.get(countries.size() - 1).abbr = "ETH";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Addis Abeba";
+        countries.get(countries.size() - 1).area = 1133380;
+        countries.get(countries.size() - 1).population = 91729000;
+        countries.get(countries.size() - 1).pop_density = 81;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Benin";
+        countries.get(countries.size() - 1).name_eng = "Benin";
+        countries.get(countries.size() - 1).abbr = "BEN";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Porto Novo";
+        countries.get(countries.size() - 1).capitol_en = "Porto-Novo";
+        countries.get(countries.size() - 1).area = 112622;
+        countries.get(countries.size() - 1).population = 10051000;
+        countries.get(countries.size() - 1).pop_density = 89;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Botswana";
+        countries.get(countries.size() - 1).name_eng = "Botswana";
+        countries.get(countries.size() - 1).abbr = "BWA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Gaborone";
+        countries.get(countries.size() - 1).area = 581730;
+        countries.get(countries.size() - 1).population = 2004000;
+        countries.get(countries.size() - 1).pop_density = 3;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Burundi";
+        countries.get(countries.size() - 1).name_eng = "Burundi";
+        countries.get(countries.size() - 1).abbr = "BDI";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Bujumbura";
+        countries.get(countries.size() - 1).area = 27834;
+        countries.get(countries.size() - 1).population = 9850000;
+        countries.get(countries.size() - 1).pop_density = 354;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Dschibuti";
+        countries.get(countries.size() - 1).name_eng = "Djibouti";
+        countries.get(countries.size() - 1).abbr = "DJI";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Dschibuti-Stadt";
+        countries.get(countries.size() - 1).capitol_en = "Djibouti City";
+        countries.get(countries.size() - 1).area = 23200;
+        countries.get(countries.size() - 1).population = 860000;
+        countries.get(countries.size() - 1).pop_density = 37;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Elfenbeinküste";
+        countries.get(countries.size() - 1).name_eng = "Ivory Coast";
+        countries.get(countries.size() - 1).abbr = "CIV";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Yamoussoukro";
+        countries.get(countries.size() - 1).area = 322463;
+        countries.get(countries.size() - 1).population = 19840000;
+        countries.get(countries.size() - 1).pop_density = 62;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Eritrea";
+        countries.get(countries.size() - 1).name_eng = "Eritrea";
+        countries.get(countries.size() - 1).abbr = "ERI";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Asmara";
+        countries.get(countries.size() - 1).area = 121144;
+        countries.get(countries.size() - 1).population = 6131000;
+        countries.get(countries.size() - 1).pop_density = 51;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Gabun";
+        countries.get(countries.size() - 1).name_eng = "Gabon";
+        countries.get(countries.size() - 1).abbr = "GAB";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Libreville";
+        countries.get(countries.size() - 1).area = 267667;
+        countries.get(countries.size() - 1).population = 1633000;
+        countries.get(countries.size() - 1).pop_density = 6;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Gambia";
+        countries.get(countries.size() - 1).name_eng = "Gambia";
+        countries.get(countries.size() - 1).abbr = "GMB";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Banjul";
+        countries.get(countries.size() - 1).area = 11295;
+        countries.get(countries.size() - 1).population = 1791000;
+        countries.get(countries.size() - 1).pop_density = 159;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Ghana";
+        countries.get(countries.size() - 1).name_eng = "Ghana";
+        countries.get(countries.size() - 1).abbr = "GHA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Accra";
+        countries.get(countries.size() - 1).area = 238537;
+        countries.get(countries.size() - 1).population = 25366000;
+        countries.get(countries.size() - 1).pop_density = 106;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Guinea";
+        countries.get(countries.size() - 1).name_eng = "Guinea";
+        countries.get(countries.size() - 1).abbr = "GIN";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Conakry";
+        countries.get(countries.size() - 1).area = 245857;
+        countries.get(countries.size() - 1).population = 11451000;
+        countries.get(countries.size() - 1).pop_density = 47;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Guinea-Bissau";
+        countries.get(countries.size() - 1).name_eng = "Guinea-Bissau";
+        countries.get(countries.size() - 1).abbr = "GNB";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Bissau";
+        countries.get(countries.size() - 1).area = 36125;
+        countries.get(countries.size() - 1).population = 1664000;
+        countries.get(countries.size() - 1).pop_density = 46;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Kamerun";
+        countries.get(countries.size() - 1).name_eng = "Cameroon";
+        countries.get(countries.size() - 1).abbr = "CMR";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Yaoundé";
+        countries.get(countries.size() - 1).area = 475442;
+        countries.get(countries.size() - 1).population = 21700000;
+        countries.get(countries.size() - 1).pop_density = 46;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Kap Verde";
+        countries.get(countries.size() - 1).name_eng = "Cape Verde";
+        countries.get(countries.size() - 1).abbr = "CPV";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Praia";
+        countries.get(countries.size() - 1).area = 4036;
+        countries.get(countries.size() - 1).population = 494000;
+        countries.get(countries.size() - 1).pop_density = 122;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Kenia";
+        countries.get(countries.size() - 1).name_eng = "Kenya";
+        countries.get(countries.size() - 1).abbr = "KEN";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Nairobi";
+        countries.get(countries.size() - 1).area = 582646;
+        countries.get(countries.size() - 1).population = 43178000;
+        countries.get(countries.size() - 1).pop_density = 74;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Komoren";
+        countries.get(countries.size() - 1).name_eng = "Comoros";
+        countries.get(countries.size() - 1).abbr = "COM";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Moroni";
+        countries.get(countries.size() - 1).area = 1862;
+        countries.get(countries.size() - 1).population = 718000;
+        countries.get(countries.size() - 1).pop_density = 386;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Dem. Republik Kongo";
+        countries.get(countries.size() - 1).name_eng = "Congo (Dem. Republic)";
+        countries.get(countries.size() - 1).abbr = "COD";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Kinshasa";
+        countries.get(countries.size() - 1).area = 2344858;
+        countries.get(countries.size() - 1).population = 65705000;
+        countries.get(countries.size() - 1).pop_density = 28;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Republik Kongo";
+        countries.get(countries.size() - 1).name_eng = "Congo (Republic)";
+        countries.get(countries.size() - 1).abbr = "COG";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Brazzaville";
+        countries.get(countries.size() - 1).area = 342000;
+        countries.get(countries.size() - 1).population = 4337000;
+        countries.get(countries.size() - 1).pop_density = 13;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Lesotho";
+        countries.get(countries.size() - 1).name_eng = "Lesotho";
+        countries.get(countries.size() - 1).abbr = "LSO";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Maseru";
+        countries.get(countries.size() - 1).area = 30355;
+        countries.get(countries.size() - 1).population = 2052000;
+        countries.get(countries.size() - 1).pop_density = 68;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Liberia";
+        countries.get(countries.size() - 1).name_eng = "Liberia";
+        countries.get(countries.size() - 1).abbr = "LBR";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Monrovia";
+        countries.get(countries.size() - 1).area = 97754;
+        countries.get(countries.size() - 1).population = 4190000;
+        countries.get(countries.size() - 1).pop_density = 43;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Libyen";
+        countries.get(countries.size() - 1).name_eng = "Libya";
+        countries.get(countries.size() - 1).abbr = "LBY";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Tripolis";
+        countries.get(countries.size() - 1).capitol_en = "Tripoli";
+        countries.get(countries.size() - 1).area = 1775500;
+        countries.get(countries.size() - 1).population = 6155000;
+        countries.get(countries.size() - 1).pop_density = 4;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Madagaskar";
+        countries.get(countries.size() - 1).name_eng = "Madagascar";
+        countries.get(countries.size() - 1).abbr = "MDG";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Antananarivo";
+        countries.get(countries.size() - 1).area = 587041;
+        countries.get(countries.size() - 1).population = 22294000;
+        countries.get(countries.size() - 1).pop_density = 38;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Malawi";
+        countries.get(countries.size() - 1).name_eng = "Malawi";
+        countries.get(countries.size() - 1).abbr = "MWI";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Lilongwe";
+        countries.get(countries.size() - 1).area = 118484;
+        countries.get(countries.size() - 1).population = 15906000;
+        countries.get(countries.size() - 1).pop_density = 134;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Mali";
+        countries.get(countries.size() - 1).name_eng = "Mali";
+        countries.get(countries.size() - 1).abbr = "MLI";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Bamako";
+        countries.get(countries.size() - 1).area = 1240192;
+        countries.get(countries.size() - 1).population = 14854000;
+        countries.get(countries.size() - 1).pop_density = 12;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Marokko";
+        countries.get(countries.size() - 1).name_eng = "Marocco";
+        countries.get(countries.size() - 1).abbr = "MAR";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Rabat";
+        countries.get(countries.size() - 1).area = 458730;
+        countries.get(countries.size() - 1).population = 32521000;
+        countries.get(countries.size() - 1).pop_density = 71;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Mauretanien";
+        countries.get(countries.size() - 1).name_eng = "Mauritania";
+        countries.get(countries.size() - 1).abbr = "MRT";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Nouakchott";
+        countries.get(countries.size() - 1).area = 1030700;
+        countries.get(countries.size() - 1).population = 3796000;
+        countries.get(countries.size() - 1).pop_density = 4;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Mauritius";
+        countries.get(countries.size() - 1).name_eng = "Mauritius";
+        countries.get(countries.size() - 1).abbr = "MUS";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Port Louis";
+        countries.get(countries.size() - 1).area = 2040;
+        countries.get(countries.size() - 1).population = 1291000;
+        countries.get(countries.size() - 1).pop_density = 633;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Mosambik";
+        countries.get(countries.size() - 1).name_eng = "Mozambique";
+        countries.get(countries.size() - 1).abbr = "MOZ";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Maputo";
+        countries.get(countries.size() - 1).area = 799380;
+        countries.get(countries.size() - 1).population = 25203000;
+        countries.get(countries.size() - 1).pop_density = 32;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Namibia";
+        countries.get(countries.size() - 1).name_eng = "Namibia";
+        countries.get(countries.size() - 1).abbr = "NAM";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Windhoek";
+        countries.get(countries.size() - 1).area = 824292;
+        countries.get(countries.size() - 1).population = 2259000;
+        countries.get(countries.size() - 1).pop_density = 3;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Niger";
+        countries.get(countries.size() - 1).name_eng = "Niger";
+        countries.get(countries.size() - 1).abbr = "NER";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Niamey";
+        countries.get(countries.size() - 1).area = 1267000;
+        countries.get(countries.size() - 1).population = 17157000;
+        countries.get(countries.size() - 1).pop_density = 14;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Nigeria";
+        countries.get(countries.size() - 1).name_eng = "Nigeria";
+        countries.get(countries.size() - 1).abbr = "NGA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Abuja";
+        countries.get(countries.size() - 1).area = 923768;
+        countries.get(countries.size() - 1).population = 168834000;
+        countries.get(countries.size() - 1).pop_density = 183;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Ruanda";
+        countries.get(countries.size() - 1).name_eng = "Rwanda";
+        countries.get(countries.size() - 1).abbr = "RWA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Kigali";
+        countries.get(countries.size() - 1).area = 26338;
+        countries.get(countries.size() - 1).population = 11458000;
+        countries.get(countries.size() - 1).pop_density = 435;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Sambia";
+        countries.get(countries.size() - 1).name_eng = "Zambia";
+        countries.get(countries.size() - 1).abbr = "ZMB";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Lusaka";
+        countries.get(countries.size() - 1).area = 752614;
+        countries.get(countries.size() - 1).population = 14075000;
+        countries.get(countries.size() - 1).pop_density = 19;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "São Tomé und Príncipe";
+        countries.get(countries.size() - 1).name_eng = "São Tomé and Príncipe";
+        countries.get(countries.size() - 1).abbr = "STP";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "São Tomé";
+        countries.get(countries.size() - 1).area = 1001;
+        countries.get(countries.size() - 1).population = 188000;
+        countries.get(countries.size() - 1).pop_density = 188;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Senegal";
+        countries.get(countries.size() - 1).name_eng = "Senegal";
+        countries.get(countries.size() - 1).abbr = "SEN";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Dakar";
+        countries.get(countries.size() - 1).area = 196722;
+        countries.get(countries.size() - 1).population = 13726000;
+        countries.get(countries.size() - 1).pop_density = 70;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Seychellen";
+        countries.get(countries.size() - 1).name_eng = "Seychelles";
+        countries.get(countries.size() - 1).abbr = "SYC";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Victoria";
+        countries.get(countries.size() - 1).area = 454;
+        countries.get(countries.size() - 1).population = 88000;
+        countries.get(countries.size() - 1).pop_density = 194;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Sierra Leone";
+        countries.get(countries.size() - 1).name_eng = "Sierra Leone";
+        countries.get(countries.size() - 1).abbr = "SLE";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Freetown";
+        countries.get(countries.size() - 1).area = 71740;
+        countries.get(countries.size() - 1).population = 5979000;
+        countries.get(countries.size() - 1).pop_density = 83;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Simbabwe";
+        countries.get(countries.size() - 1).name_eng = "Zimbabwe";
+        countries.get(countries.size() - 1).abbr = "ZWE";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Harare";
+        countries.get(countries.size() - 1).area = 390757;
+        countries.get(countries.size() - 1).population = 13724000;
+        countries.get(countries.size() - 1).pop_density = 35;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Somalia";
+        countries.get(countries.size() - 1).name_eng = "Somalia";
+        countries.get(countries.size() - 1).abbr = "SOM";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Mogadischu";
+        countries.get(countries.size() - 1).capitol_en = "Mogadishu";
+        countries.get(countries.size() - 1).area = 637657;
+        countries.get(countries.size() - 1).population = 10195000;
+        countries.get(countries.size() - 1).pop_density = 16;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Südafrika";
+        countries.get(countries.size() - 1).name_eng = "South Africa";
+        countries.get(countries.size() - 1).abbr = "ZAF";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Pretoria";
+        countries.get(countries.size() - 1).area = 1220813;
+        countries.get(countries.size() - 1).population = 51189000;
+        countries.get(countries.size() - 1).pop_density = 42;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Sudan";
+        countries.get(countries.size() - 1).name_eng = "Sudan";
+        countries.get(countries.size() - 1).abbr = "SDN";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Khartum";
+        countries.get(countries.size() - 1).capitol_en = "Khartoum";
+        countries.get(countries.size() - 1).area = 1840687;
+        countries.get(countries.size() - 1).population = 37195000;
+        countries.get(countries.size() - 1).pop_density = 20;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Südsudan";
+        countries.get(countries.size() - 1).name_eng = "South Sudan";
+        countries.get(countries.size() - 1).abbr = "SSD";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Juba";
+        countries.get(countries.size() - 1).area = 619745;
+        countries.get(countries.size() - 1).population = 10838000;
+        countries.get(countries.size() - 1).pop_density = 18;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Swasiland";
+        countries.get(countries.size() - 1).name_eng = "Swaziland";
+        countries.get(countries.size() - 1).abbr = "SWZ";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Mbabane";
+        countries.get(countries.size() - 1).area = 17364;
+        countries.get(countries.size() - 1).population = 1231000;
+        countries.get(countries.size() - 1).pop_density = 71;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Tansania";
+        countries.get(countries.size() - 1).name_eng = "Tanzania";
+        countries.get(countries.size() - 1).abbr = "TZA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Dodoma";
+        countries.get(countries.size() - 1).area = 945087;
+        countries.get(countries.size() - 1).population = 47783000;
+        countries.get(countries.size() - 1).pop_density = 51;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Togo";
+        countries.get(countries.size() - 1).name_eng = "Togo";
+        countries.get(countries.size() - 1).abbr = "TGO";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Lomé";
+        countries.get(countries.size() - 1).area = 56785;
+        countries.get(countries.size() - 1).population = 6643000;
+        countries.get(countries.size() - 1).pop_density = 117;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Tschad";
+        countries.get(countries.size() - 1).name_eng = "Chad";
+        countries.get(countries.size() - 1).abbr = "TCD";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "N'Djamena";
+        countries.get(countries.size() - 1).area = 1284000;
+        countries.get(countries.size() - 1).population = 12448000;
+        countries.get(countries.size() - 1).pop_density = 10;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Tunesien";
+        countries.get(countries.size() - 1).name_eng = "Tunisia";
+        countries.get(countries.size() - 1).abbr = "TUN";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Tunis";
+        countries.get(countries.size() - 1).area = 163610;
+        countries.get(countries.size() - 1).population = 10778000;
+        countries.get(countries.size() - 1).pop_density = 66;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Uganda";
+        countries.get(countries.size() - 1).name_eng = "Uganda";
+        countries.get(countries.size() - 1).abbr = "UGA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Kampala";
+        countries.get(countries.size() - 1).area = 241548;
+        countries.get(countries.size() - 1).population = 36346000;
+        countries.get(countries.size() - 1).pop_density = 151;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Westsahara";
+        countries.get(countries.size() - 1).name_eng = "Sahrawi Arab DR";
+        countries.get(countries.size() - 1).abbr = "ESH";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "El Aaiún";
+        countries.get(countries.size() - 1).area = 252120;
+        countries.get(countries.size() - 1).population = 567000;
+        countries.get(countries.size() - 1).pop_density = 2;
+        countries.get(countries.size() - 1).color = -0;
+
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Zentralafrikanische Republik";
+        countries.get(countries.size() - 1).name_eng = "Central African Republic";
+        countries.get(countries.size() - 1).abbr = "CAF";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Bangui";
+        countries.get(countries.size() - 1).area = 622984;
+        countries.get(countries.size() - 1).population = 4525000;
+        countries.get(countries.size() - 1).pop_density = 7;
+        countries.get(countries.size() - 1).color = -0;
     }
 }

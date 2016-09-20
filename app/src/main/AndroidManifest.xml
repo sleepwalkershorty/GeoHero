@@ -28,7 +28,8 @@
         <activity
             android:name=".ActivityMain"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:parentActivityName=".ActivityStart">
         </activity>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
