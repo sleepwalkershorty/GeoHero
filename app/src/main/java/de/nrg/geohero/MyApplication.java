@@ -688,7 +688,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1001450;
         countries.get(countries.size() - 1).population = 80722000;
         countries.get(countries.size() - 1).pop_density = 81;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -10478047;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -701,7 +701,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 2381741;
         countries.get(countries.size() - 1).population = 38482000;
         countries.get(countries.size() - 1).pop_density = 16;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -16770817;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -713,7 +713,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1246700;
         countries.get(countries.size() - 1).population = 20821000;
         countries.get(countries.size() - 1).pop_density = 17;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -5787649;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -725,7 +725,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 28051;
         countries.get(countries.size() - 1).population = 736000;
         countries.get(countries.size() - 1).pop_density = 26;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -884419;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -737,7 +737,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1133380;
         countries.get(countries.size() - 1).population = 91729000;
         countries.get(countries.size() - 1).pop_density = 81;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -11301618;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -750,7 +750,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 112622;
         countries.get(countries.size() - 1).population = 10051000;
         countries.get(countries.size() - 1).pop_density = 89;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -4057570;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -762,7 +762,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 581730;
         countries.get(countries.size() - 1).population = 2004000;
         countries.get(countries.size() - 1).pop_density = 3;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -6209531;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -774,7 +774,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 27834;
         countries.get(countries.size() - 1).population = 9850000;
         countries.get(countries.size() - 1).pop_density = 354;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -1514580;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -787,7 +787,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 23200;
         countries.get(countries.size() - 1).population = 860000;
         countries.get(countries.size() - 1).pop_density = 37;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -4789832;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -799,7 +799,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 322463;
         countries.get(countries.size() - 1).population = 19840000;
         countries.get(countries.size() - 1).pop_density = 62;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -2044736;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -811,7 +811,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 121144;
         countries.get(countries.size() - 1).population = 6131000;
         countries.get(countries.size() - 1).pop_density = 51;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -1810306;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -823,7 +823,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 267667;
         countries.get(countries.size() - 1).population = 1633000;
         countries.get(countries.size() - 1).pop_density = 6;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -11776413;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -835,7 +835,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 11295;
         countries.get(countries.size() - 1).population = 1791000;
         countries.get(countries.size() - 1).pop_density = 159;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -11472299;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -847,7 +847,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 238537;
         countries.get(countries.size() - 1).population = 25366000;
         countries.get(countries.size() - 1).pop_density = 106;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -9715960;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -859,7 +859,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 245857;
         countries.get(countries.size() - 1).population = 11451000;
         countries.get(countries.size() - 1).pop_density = 47;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -5632;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -871,7 +871,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 36125;
         countries.get(countries.size() - 1).population = 1664000;
         countries.get(countries.size() - 1).pop_density = 46;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -16711929;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -883,7 +883,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 475442;
         countries.get(countries.size() - 1).population = 21700000;
         countries.get(countries.size() - 1).pop_density = 46;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -65479;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -895,7 +895,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 4036;
         countries.get(countries.size() - 1).population = 494000;
         countries.get(countries.size() - 1).pop_density = 122;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -16711768;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -907,7 +907,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 582646;
         countries.get(countries.size() - 1).population = 43178000;
         countries.get(countries.size() - 1).pop_density = 74;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -8218520;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -919,7 +919,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1862;
         countries.get(countries.size() - 1).population = 718000;
         countries.get(countries.size() - 1).pop_density = 386;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -15880328;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -931,7 +931,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 2344858;
         countries.get(countries.size() - 1).population = 65705000;
         countries.get(countries.size() - 1).pop_density = 28;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -4609274;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -943,7 +943,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 342000;
         countries.get(countries.size() - 1).population = 4337000;
         countries.get(countries.size() - 1).pop_density = 13;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -7667968;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -955,7 +955,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 30355;
         countries.get(countries.size() - 1).population = 2052000;
         countries.get(countries.size() - 1).pop_density = 68;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -5989856;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -967,7 +967,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 97754;
         countries.get(countries.size() - 1).population = 4190000;
         countries.get(countries.size() - 1).pop_density = 43;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -2495293;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -980,7 +980,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1775500;
         countries.get(countries.size() - 1).population = 6155000;
         countries.get(countries.size() - 1).pop_density = 4;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -4788874;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -992,7 +992,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 587041;
         countries.get(countries.size() - 1).population = 22294000;
         countries.get(countries.size() - 1).pop_density = 38;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -12559074;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1004,7 +1004,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 118484;
         countries.get(countries.size() - 1).population = 15906000;
         countries.get(countries.size() - 1).pop_density = 134;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -7915190;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1016,7 +1016,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1240192;
         countries.get(countries.size() - 1).population = 14854000;
         countries.get(countries.size() - 1).pop_density = 12;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -10274787;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1028,7 +1028,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 458730;
         countries.get(countries.size() - 1).population = 32521000;
         countries.get(countries.size() - 1).pop_density = 71;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -1483164;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1040,7 +1040,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1030700;
         countries.get(countries.size() - 1).population = 3796000;
         countries.get(countries.size() - 1).pop_density = 4;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -65524;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1052,7 +1052,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 2040;
         countries.get(countries.size() - 1).population = 1291000;
         countries.get(countries.size() - 1).pop_density = 633;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -16210163;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1064,7 +1064,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 799380;
         countries.get(countries.size() - 1).population = 25203000;
         countries.get(countries.size() - 1).pop_density = 32;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -1384339;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1076,7 +1076,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 824292;
         countries.get(countries.size() - 1).population = 2259000;
         countries.get(countries.size() - 1).pop_density = 3;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -6072080;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1088,7 +1088,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1267000;
         countries.get(countries.size() - 1).population = 17157000;
         countries.get(countries.size() - 1).pop_density = 14;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -8749671;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1100,7 +1100,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 923768;
         countries.get(countries.size() - 1).population = 168834000;
         countries.get(countries.size() - 1).pop_density = 183;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -40704;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1112,7 +1112,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 26338;
         countries.get(countries.size() - 1).population = 11458000;
         countries.get(countries.size() - 1).pop_density = 435;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -10791136;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1124,7 +1124,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 752614;
         countries.get(countries.size() - 1).population = 14075000;
         countries.get(countries.size() - 1).pop_density = 19;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -3044466;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1136,7 +1136,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1001;
         countries.get(countries.size() - 1).population = 188000;
         countries.get(countries.size() - 1).pop_density = 188;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -10247835;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1148,7 +1148,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 196722;
         countries.get(countries.size() - 1).population = 13726000;
         countries.get(countries.size() - 1).pop_density = 70;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -10743893;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1160,7 +1160,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 454;
         countries.get(countries.size() - 1).population = 88000;
         countries.get(countries.size() - 1).pop_density = 194;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -9986164;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1172,7 +1172,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 71740;
         countries.get(countries.size() - 1).population = 5979000;
         countries.get(countries.size() - 1).pop_density = 83;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -3173472;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1184,7 +1184,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 390757;
         countries.get(countries.size() - 1).population = 13724000;
         countries.get(countries.size() - 1).pop_density = 35;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -8519425;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1197,7 +1197,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 637657;
         countries.get(countries.size() - 1).population = 10195000;
         countries.get(countries.size() - 1).pop_density = 16;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -14785248;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1209,7 +1209,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1220813;
         countries.get(countries.size() - 1).population = 51189000;
         countries.get(countries.size() - 1).pop_density = 42;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -6464160;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1222,7 +1222,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1840687;
         countries.get(countries.size() - 1).population = 37195000;
         countries.get(countries.size() - 1).pop_density = 20;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -5328694;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1234,7 +1234,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 619745;
         countries.get(countries.size() - 1).population = 10838000;
         countries.get(countries.size() - 1).pop_density = 18;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -9219946;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1246,7 +1246,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 17364;
         countries.get(countries.size() - 1).population = 1231000;
         countries.get(countries.size() - 1).pop_density = 71;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -5537067;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1258,7 +1258,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 945087;
         countries.get(countries.size() - 1).population = 47783000;
         countries.get(countries.size() - 1).pop_density = 51;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -9142299;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1270,7 +1270,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 56785;
         countries.get(countries.size() - 1).population = 6643000;
         countries.get(countries.size() - 1).pop_density = 117;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -793276;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1282,7 +1282,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 1284000;
         countries.get(countries.size() - 1).population = 12448000;
         countries.get(countries.size() - 1).pop_density = 10;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -6580379;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1294,7 +1294,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 163610;
         countries.get(countries.size() - 1).population = 10778000;
         countries.get(countries.size() - 1).pop_density = 66;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -4968627;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1306,7 +1306,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 241548;
         countries.get(countries.size() - 1).population = 36346000;
         countries.get(countries.size() - 1).pop_density = 151;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -2254223;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1318,7 +1318,7 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 252120;
         countries.get(countries.size() - 1).population = 567000;
         countries.get(countries.size() - 1).pop_density = 2;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -6162373;
 
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
@@ -1330,6 +1330,6 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).area = 622984;
         countries.get(countries.size() - 1).population = 4525000;
         countries.get(countries.size() - 1).pop_density = 7;
-        countries.get(countries.size() - 1).color = -0;
+        countries.get(countries.size() - 1).color = -16773484;
     }
 }
