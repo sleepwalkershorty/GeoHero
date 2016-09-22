@@ -30,32 +30,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper
     private static final String DATABASE_NAME = "database.db";
     private static final int DATABASE_VERSION = 3;
 
-    // Database creation sql statement
-    private static final String DATABASE_CREATE = "create table "
-            + TABLE_HIGHSCORES + "( "
-            + COLUMN_ID + " integer primary key autoincrement, "
-            + COLUMN_NAME + " text not null, "
-            + COLUMN_TIME + " integer, "
-            + COLUMN_ERRORS + " integer, "
-            + COLUMN_POINTS + " integer, "
-            + COLUMN_GAME_TYPE + " integer, "
-            + COLUMN_TIMESTAMP + " integer "
-            + "); " +
-            "create table "
-            + TABLE_COUNTRIES + "( "
-            + COLUMN_ID + " integer primary key autoincrement, "
-            + COLUMN_NAME + " text not null, "
-            + COLUMN_NAME_EN + " text not null, "
-            + COLUMN_CONTINENT + " integer, "
-            + COLUMN_ABBR + " text not null, "
-            + COLUMN_CAPITOL + " text not null, "
-            + COLUMN_CAPITOL_EN + " text not null, "
-            + COLUMN_AREA + " integer, "
-            + COLUMN_POPULATION + " integer, "
-            + COLUMN_DENSITY + " integer, "
-            + COLUMN_COLOR + " integer "
-            + ");";
-
     private static final String CREATE_TABLE_COUNTRIES = "create table "
             + TABLE_COUNTRIES + "( "
             + COLUMN_ID + " integer primary key autoincrement, "
@@ -90,7 +64,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper
     @Override
     public void onCreate(SQLiteDatabase database)
     {
-        database.execSQL(DATABASE_CREATE);
+        database.execSQL(CREATE_TABLE_HIGHSCORES);
+        database.execSQL(CREATE_TABLE_COUNTRIES);
     }
 
     @Override

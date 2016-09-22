@@ -64,7 +64,7 @@
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
             android:cropToPadding="false"
-            android:src="@drawable/europe_mask2"
+            android:src="@drawable/europe_mask"
             android:visibility="invisible" />
 
         <ImageView
@@ -84,7 +84,7 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
-            android:src="@drawable/europe_mask2"
+            android:src="@drawable/europe_mask"
             android:visibility="invisible" />
 
         <de.nrg.geohero.TouchImageView
