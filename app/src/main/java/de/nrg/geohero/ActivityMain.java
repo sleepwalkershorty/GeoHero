@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -52,6 +53,7 @@ public class ActivityMain extends Activity
 
     private static TouchImageView image1;
     private static TouchImageView imgMask;
+    private static TouchImageView imgSatellite;
     private static ImageView imgBack;
     private static ImageView imgMaskBack;
     private static TextView tvLoading;
@@ -91,9 +93,9 @@ public class ActivityMain extends Activity
 
         countries.clear();
 
-        for (int i=0;i<MyApplication.countries.size();i++)
+        for (int i = 0; i < MyApplication.countries.size(); i++)
         {
-            if (MyApplication.countries.get(i).getContinent() == MyApplication.currentGame-1)
+            if (MyApplication.countries.get(i).getContinent() == MyApplication.currentGame - 1)
                 countries.add(MyApplication.countries.get(i));
         }
 
@@ -224,6 +226,7 @@ public class ActivityMain extends Activity
 
         image1.setZoom(1f);
         imgMask.setZoom(image1);
+        imgSatellite.setZoom(image1);
 
 //        image1.setZoom(4);
 //        imgMask.setZoom(image1);
@@ -237,10 +240,11 @@ public class ActivityMain extends Activity
                 imgMaskBack.setImageResource(R.drawable.europe_mask);
                 break;
             case 2:
-                image1.setImageResource(R.drawable.africa);
-                imgBack.setImageResource(R.drawable.africa);
-                imgMask.setImageResource(R.drawable.africa_mask);
-                imgMaskBack.setImageResource(R.drawable.africa_mask);
+                image1.setImageResource(R.drawable.africa_new);
+                imgBack.setImageResource(R.drawable.africa_new);
+                imgMask.setImageResource(R.drawable.africa_new_mask);
+                imgMaskBack.setImageResource(R.drawable.africa_new_mask);
+                imgSatellite.setImageResource(R.drawable.africa_sat);
                 break;
         }
 
@@ -285,58 +289,6 @@ public class ActivityMain extends Activity
         timeThread.start();
     }
 
-//    class MyGestureListener extends GestureDetector.SimpleOnGestureListener implements View.OnTouchListener
-//    {
-//        Context context;
-//        GestureDetector gDetector;
-//
-//        public MyGestureListener()
-//        {
-//            super();
-//        }
-//
-//        public MyGestureListener(Context context) {
-//            this(context, null);
-//        }
-//
-//        public MyGestureListener(Context context, GestureDetector gDetector) {
-//
-//            if(gDetector == null)
-//                gDetector = new GestureDetector(context, this);
-//
-//            this.context = context;
-//            this.gDetector = gDetector;
-//        }
-//
-//        @Override
-//        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//
-//            Toast.makeText(context, "Fling",Toast.LENGTH_SHORT).show();
-//            return super.onFling(e1, e2, velocityX, velocityY);
-//        }
-//
-//        @Override
-//        public boolean onSingleTapConfirmed(MotionEvent e) {
-//            Toast.makeText(context, "SingleTap",Toast.LENGTH_SHORT).show();
-//            return super.onSingleTapConfirmed(e);
-//        }
-//
-//        public boolean onTouch(View v, MotionEvent event) {
-//
-//            // Within the MyGestureListener class you can now manage the event.getAction() codes.
-//
-//            // Note that we are now calling the gesture Detectors onTouchEvent. And given we've set this class as the GestureDetectors listener
-//            // the onFling, onSingleTap etc methods will be executed.
-//            Toast.makeText(context, "onTouch",Toast.LENGTH_SHORT).show();
-//            return gDetector.onTouchEvent(event);
-//        }
-//
-//        public GestureDetector getDetector()
-//        {
-//            return gDetector;
-//        }
-//    }
-
     public static class PlaceholderFragment extends Fragment
     {
 
@@ -360,6 +312,7 @@ public class ActivityMain extends Activity
             imgMask = (TouchImageView) rootView.findViewById(R.id.imageView2);
             imgBack = (ImageView) rootView.findViewById(R.id.imageView3);
             imgMaskBack = (ImageView) rootView.findViewById(R.id.imageView4);
+            imgSatellite = (TouchImageView) rootView.findViewById(R.id.imageView5);
 
             pbLoading = (ProgressBar) rootView.findViewById(R.id.pbLoading);
             tvLoading = (TextView) rootView.findViewById(R.id.tvLoading);
@@ -367,196 +320,158 @@ public class ActivityMain extends Activity
 
             image1.setMaxZoom(10);
             imgMask.setMaxZoom(10);
+            imgSatellite.setMaxZoom(10);
 
-//            image1.setOnTouchListener(myGestureListener);
             image1.setOnDoubleTapListener(new GestureDetector.OnDoubleTapListener()
             {
                 @Override
                 public boolean onSingleTapConfirmed(MotionEvent e)
                 {
-                    Toast.makeText(getActivity(),"SingleTap",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity(),"SingleTap",Toast.LENGTH_SHORT).show();
+                    //normal tap
+                    //check the click
+                    imgMask.setZoom(image1);
+                    imgSatellite.setZoom(image1);
+                    int x = (int) e.getX();
+                    int y = (int) e.getY();
+
+                    imgMask.setDrawingCacheEnabled(true);
+                    bmpMask = Bitmap.createBitmap(imgMask.getDrawingCache());
+                    imgMask.setDrawingCacheEnabled(false);
+
+                    pixelsMask = new int[bmpMask.getWidth() * bmpMask.getHeight()];
+                    bmpMask.getPixels(pixelsMask, 0, bmpMask.getWidth(), 0, 0, bmpMask.getWidth(), bmpMask.getHeight());
+
+                    image1.setDrawingCacheEnabled(true);
+                    bmpOrigin = Bitmap.createBitmap(image1.getDrawingCache());
+                    image1.setDrawingCacheEnabled(false);
+
+                    int[] pixels = new int[bmpOrigin.getWidth() * bmpOrigin.getHeight()];
+                    bmpOrigin.getPixels(pixels, 0, bmpOrigin.getWidth(), 0, 0, bmpOrigin.getWidth(), bmpOrigin.getHeight());
+
+                    int color = bmpMask.getPixel(x, y);
+
+//                                  int color2 = bmpOrigin.getPixel(x, y);
+//                                  Toast.makeText(getActivity(), "Color=" + color, Toast.LENGTH_SHORT).show();
+
+                    if (randomCountry >= 0)
+                    {
+                        if (countries.get(randomCountry).color == color)
+                        {
+                            playSound(soundIDs.get(0), 0.67f);
+                            //gefunden
+
+                            //Take bmp from original Back
+                            imgBack.setDrawingCacheEnabled(true);
+                            bmpOriginBack = Bitmap.createBitmap(imgBack.getDrawingCache());
+                            imgBack.setDrawingCacheEnabled(false);
+                            pixelsBack = new int[bmpOriginBack.getWidth() * bmpOriginBack.getHeight()];
+                            bmpOriginBack.getPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getHeight());
+
+                            //Take bmp from mask Back
+                            imgMaskBack.setDrawingCacheEnabled(true);
+                            bmpMaskBack = Bitmap.createBitmap(imgMaskBack.getDrawingCache());
+                            imgMaskBack.setDrawingCacheEnabled(false);
+                            pixelsMaskBack = new int[bmpMaskBack.getWidth() * bmpMaskBack.getHeight()];
+                            bmpMaskBack.getPixels(pixelsMaskBack, 0, bmpMaskBack.getWidth(), 0, 0, bmpMaskBack.getWidth(), bmpMaskBack.getHeight());
+
+                            //just do drawing on bmp original back
+                            if (pixelsMaskBack.length != pixelsBack.length)
+                            {
+                                //fix bug
+                            }
+
+                            for (int i = 0; i < pixelsMaskBack.length; i++)
+                            {
+                                if (i < pixelsBack.length && i < pixelsMaskBack.length
+                                        && pixelsMaskBack[i] == color && (pixelsBack[i] == -4144960)) // || pixelsBack[i] == -4605511))
+                                    pixelsBack[i] = color;
+//                                    pixelsBack[i] = Color.TRANSPARENT;
+                            }
+
+                            imgMask.setImageBitmap(bmpMaskBack);
+                            bmpOriginBack.setPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getWidth());
+                            imgBack.setImageBitmap(bmpOriginBack);
+                            image1.setImageBitmap(bmpOriginBack);
+
+                            if (found.size() < countries.size())
+                            {
+                                tvStatus.setText(found.size() + "/" + countries.size());
+                                int c = new Random().nextInt(countries.size());
+                                while (found.contains(c))
+                                    c = new Random().nextInt(countries.size());
+                                randomCountry = c;
+                                found.add(c);
+
+                                image1.savePreviousImageValues();
+                                if (Locale.getDefault().getLanguage().equals("de"))
+                                    tvCommand.setText(ctx.getString(R.string.command_find)
+                                            + " " + countries.get(randomCountry).name);
+                                else
+                                    tvCommand.setText(ctx.getString(R.string.command_find)
+                                            + " " + countries.get(randomCountry).name_eng);
+                            }
+                            else
+                            {
+                                tvStatus.setText(found.size() + "/" + countries.size());
+                                Toast.makeText(getActivity(), R.string.toast_superb, Toast.LENGTH_SHORT).show();
+                                tvCommand.setVisibility(View.GONE);
+                                randomCountry = -1;
+
+                                if (timeThread != null)
+                                {
+                                    timeThread.interrupt();
+                                    timeThread = null;
+                                }
+
+                                endTime = System.currentTimeMillis();
+                                int seconds = (int) ((endTime - startTime) / 1000.);
+
+                                Object[] params = new Object[2];
+                                params[0] = seconds;
+                                params[1] = errors;
+
+                                int points = MyApplication.calcPoints(seconds, errors);
+                                ArrayList<Highscore> list = MyApplication.getDatasource()
+                                        .getTop20(MyApplication.currentGame);
+                                MyDialogFragment dialog2 = null;
+                                if (list.size() < 20)
+                                    dialog2 = MyDialogFragment.getInstance(getActivity(), 1, params);
+                                else
+                                {
+                                    if (list.get(list.size() - 1).getPoints() < points)
+                                        dialog2 = MyDialogFragment.getInstance(getActivity(), 1, params);
+                                    else
+                                        dialog2 = MyDialogFragment.getInstance(getActivity(), 2, params);
+                                }
+                                dialog2.setCancelable(false);
+                                dialog2.show(getFragmentManager(), "myNameFragment");
+                            }
+                        }
+                        else
+                        {
+                            playSound(soundIDs.get(1), 0.70f);
+
+                            errors++;
+
+                            image1.savePreviousImageValues();
+                            tvError.setText(ctx.getString(R.string.errors) + " " + errors);
+                        }
+                    }
                     return false;
                 }
 
                 @Override
                 public boolean onDoubleTap(MotionEvent e)
                 {
-                    Toast.makeText(getActivity(),"DoubleTap",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity(),"DoubleTap",Toast.LENGTH_SHORT).show();
                     return false;
                 }
 
                 @Override
                 public boolean onDoubleTapEvent(MotionEvent e)
                 {
-                    Toast.makeText(getActivity(),"DoubleTap Event",Toast.LENGTH_SHORT).show();
-                    return false;
-                }
-            });
-
-            image1.setOnTouchListener(new View.OnTouchListener()
-            {
-
-                @Override
-                public boolean onTouch(View v, MotionEvent event)
-                {
-                    switch (event.getAction() & MotionEvent.ACTION_MASK)
-                    {
-                        case MotionEvent.ACTION_DOWN:
-                            downX = event.getX();
-                            downY = event.getY();
-                            isOnClick = true;
-                            break;
-                        case MotionEvent.ACTION_CANCEL:
-                        case MotionEvent.ACTION_UP:
-                            if (isOnClick)
-                            {
-                                if (System.currentTimeMillis() - lastClickTime <= DOUBLE_PRESS_INTERVAL)
-                                {
-                                    //Double Tap
-//                                    Toast.makeText(getActivity(),"Double tap", Toast.LENGTH_SHORT).show();
-                                }
-                                else
-                                {
-                                    //normal tap
-                                    //check the click
-                                    imgMask.setZoom(image1);
-                                    int x = (int) event.getX();
-                                    int y = (int) event.getY();
-
-                                    imgMask.setDrawingCacheEnabled(true);
-                                    bmpMask = Bitmap.createBitmap(imgMask.getDrawingCache());
-                                    imgMask.setDrawingCacheEnabled(false);
-
-                                    pixelsMask = new int[bmpMask.getWidth() * bmpMask.getHeight()];
-                                    bmpMask.getPixels(pixelsMask, 0, bmpMask.getWidth(), 0, 0, bmpMask.getWidth(), bmpMask.getHeight());
-
-                                    image1.setDrawingCacheEnabled(true);
-                                    bmpOrigin = Bitmap.createBitmap(image1.getDrawingCache());
-                                    image1.setDrawingCacheEnabled(false);
-
-                                    int[] pixels = new int[bmpOrigin.getWidth() * bmpOrigin.getHeight()];
-                                    bmpOrigin.getPixels(pixels, 0, bmpOrigin.getWidth(), 0, 0, bmpOrigin.getWidth(), bmpOrigin.getHeight());
-
-                                    int color = bmpMask.getPixel(x, y);
-
-//                                  int color2 = bmpOrigin.getPixel(x, y);
-//                                  Toast.makeText(getActivity(), "Color=" + color2, Toast.LENGTH_SHORT).show();
-
-                                    if (randomCountry >= 0)
-                                    {
-                                        if (countries.get(randomCountry).color == color)
-                                        {
-                                            playSound(soundIDs.get(0), 0.67f);
-                                            //gefunden
-
-                                            //Take bmp from original Back
-                                            imgBack.setDrawingCacheEnabled(true);
-                                            bmpOriginBack = Bitmap.createBitmap(imgBack.getDrawingCache());
-                                            imgBack.setDrawingCacheEnabled(false);
-                                            pixelsBack = new int[bmpOriginBack.getWidth() * bmpOriginBack.getHeight()];
-                                            bmpOriginBack.getPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getHeight());
-
-                                            //Take bmp from mask Back
-                                            imgMaskBack.setDrawingCacheEnabled(true);
-                                            bmpMaskBack = Bitmap.createBitmap(imgMaskBack.getDrawingCache());
-                                            imgMaskBack.setDrawingCacheEnabled(false);
-                                            pixelsMaskBack = new int[bmpMaskBack.getWidth() * bmpMaskBack.getHeight()];
-                                            bmpMaskBack.getPixels(pixelsMaskBack, 0, bmpMaskBack.getWidth(), 0, 0, bmpMaskBack.getWidth(), bmpMaskBack.getHeight());
-
-                                            //just do drawing on bmp original back
-                                            if (pixelsMaskBack.length != pixelsBack.length)
-                                            {
-                                                //fix bug
-                                            }
-
-                                            for (int i = 0; i < pixelsMaskBack.length; i++)
-                                            {
-                                                if (i < pixelsBack.length && i < pixelsMaskBack.length
-                                                        && pixelsMaskBack[i] == color && (pixelsBack[i] == -4144960 || pixelsBack[i] == -4605511))
-                                                    pixelsBack[i] = color;
-                                            }
-
-                                            imgMask.setImageBitmap(bmpMaskBack);
-                                            bmpOriginBack.setPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getWidth());
-                                            imgBack.setImageBitmap(bmpOriginBack);
-                                            image1.setImageBitmap(bmpOriginBack);
-
-                                            if (found.size() < countries.size())
-                                            {
-                                                tvStatus.setText(found.size() + "/" + countries.size());
-                                                int c = new Random().nextInt(countries.size());
-                                                while (found.contains(c))
-                                                    c = new Random().nextInt(countries.size());
-                                                randomCountry = c;
-                                                found.add(c);
-
-                                                image1.savePreviousImageValues();
-                                                if (Locale.getDefault().getLanguage().equals("de"))
-                                                    tvCommand.setText(ctx.getString(R.string.command_find)
-                                                            + " " + countries.get(randomCountry).name);
-                                                else
-                                                    tvCommand.setText(ctx.getString(R.string.command_find)
-                                                            + " " + countries.get(randomCountry).name_eng);
-                                            }
-                                            else
-                                            {
-                                                tvStatus.setText(found.size() + "/" + countries.size());
-                                                Toast.makeText(getActivity(), R.string.toast_superb, Toast.LENGTH_SHORT).show();
-                                                tvCommand.setVisibility(View.GONE);
-                                                randomCountry = -1;
-
-                                                if (timeThread != null)
-                                                {
-                                                    timeThread.interrupt();
-                                                    timeThread = null;
-                                                }
-
-                                                endTime = System.currentTimeMillis();
-                                                int seconds = (int) ((endTime - startTime) / 1000.);
-
-                                                Object[] params = new Object[2];
-                                                params[0] = seconds;
-                                                params[1] = errors;
-
-                                                int points = MyApplication.calcPoints(seconds, errors);
-                                                ArrayList<Highscore> list = MyApplication.getDatasource()
-                                                        .getTop20(MyApplication.currentGame);
-                                                MyDialogFragment dialog2 = null;
-                                                if (list.size() < 20)
-                                                    dialog2 = MyDialogFragment.getInstance(getActivity(), 1, params);
-                                                else
-                                                {
-                                                    if (list.get(list.size() - 1).getPoints() < points)
-                                                        dialog2 = MyDialogFragment.getInstance(getActivity(), 1, params);
-                                                    else
-                                                        dialog2 = MyDialogFragment.getInstance(getActivity(), 2, params);
-                                                }
-                                                dialog2.setCancelable(false);
-                                                dialog2.show(getFragmentManager(), "myNameFragment");
-                                            }
-                                        }
-                                        else
-                                        {
-                                            playSound(soundIDs.get(1), 0.70f);
-
-                                            errors++;
-
-                                            image1.savePreviousImageValues();
-                                            tvError.setText(ctx.getString(R.string.errors) + " " + errors);
-                                        }
-                                    }
-                                }
-                            }
-                            lastClickTime = System.currentTimeMillis();
-                            break;
-                        case MotionEvent.ACTION_MOVE:
-                            if (isOnClick && (Math.abs(downX - event.getX()) > SCROLL_THRESHOLD || Math.abs(downY - event.getY()) > SCROLL_THRESHOLD))
-                                isOnClick = false;
-                            break;
-                    }
-
-                    Log.d("Debug", "Action: " + event.getAction());
-
+//                    Toast.makeText(getActivity(),"DoubleTap Event",Toast.LENGTH_SHORT).show();
                     return false;
                 }
             });
@@ -632,48 +547,48 @@ public class ActivityMain extends Activity
     {
         super.onConfigurationChanged(newConfig);
 
-        if (imgBack != null && imgMaskBack != null)
-        {
-            imgBack.setImageResource(R.drawable.europe);
-            for (int i = 0; i < found.size() - 1; i++)
-            {
-                //jedes Land wieder einzeichnen
-                for (int j = 0; j < countries.size(); j++)
-                {
-                    if (countries.get(j).id == found.get(i))
-                    {
-                        //Land gefunden
-                        //Take bmp from original Back
-                        imgBack.setDrawingCacheEnabled(true);
-                        bmpOriginBack = Bitmap.createBitmap(imgBack.getDrawingCache());
-                        imgBack.setDrawingCacheEnabled(false);
-                        pixelsBack = new int[bmpOriginBack.getWidth() * bmpOriginBack.getHeight()];
-                        bmpOriginBack.getPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getHeight());
-
-                        //Take bmp from mask Back
-                        imgMaskBack.setDrawingCacheEnabled(true);
-                        bmpMaskBack = Bitmap.createBitmap(imgMaskBack.getDrawingCache());
-                        imgMaskBack.setDrawingCacheEnabled(false);
-                        pixelsMaskBack = new int[bmpMaskBack.getWidth() * bmpMaskBack.getHeight()];
-                        bmpMaskBack.getPixels(pixelsMaskBack, 0, bmpMaskBack.getWidth(), 0, 0, bmpMaskBack.getWidth(), bmpMaskBack.getHeight());
-
-                        //just do drawing on bmp original back
-                        for (int x = 0; x < pixelsMaskBack.length; x++)
-                        {
-                            if (pixelsMaskBack[x] == countries.get(j).color && pixelsBack[x] == -4144960)
-                                pixelsBack[x] = countries.get(j).color;
-                        }
+//        if (imgBack != null && imgMaskBack != null)
+//        {
+//            imgBack.setImageResource(R.drawable.europe);
+//            for (int i = 0; i < found.size() - 1; i++)
+//            {
+//                //jedes Land wieder einzeichnen
+//                for (int j = 0; j < countries.size(); j++)
+//                {
+//                    if (countries.get(j).id == found.get(i))
+//                    {
+//                        //Land gefunden
+//                        //Take bmp from original Back
+//                        imgBack.setDrawingCacheEnabled(true);
+//                        bmpOriginBack = Bitmap.createBitmap(imgBack.getDrawingCache());
+//                        imgBack.setDrawingCacheEnabled(false);
+//                        pixelsBack = new int[bmpOriginBack.getWidth() * bmpOriginBack.getHeight()];
+//                        bmpOriginBack.getPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getHeight());
 //
-//						imgMask.setImageBitmap(bmpMaskBack);
-                        bmpOriginBack.setPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getWidth());
-                        imgBack.setImageBitmap(bmpOriginBack);
-//						image1.setImageBitmap(bmpOriginBack);
-
-                        break;
-                    }
-                }
-            }
-        }
+//                        //Take bmp from mask Back
+//                        imgMaskBack.setDrawingCacheEnabled(true);
+//                        bmpMaskBack = Bitmap.createBitmap(imgMaskBack.getDrawingCache());
+//                        imgMaskBack.setDrawingCacheEnabled(false);
+//                        pixelsMaskBack = new int[bmpMaskBack.getWidth() * bmpMaskBack.getHeight()];
+//                        bmpMaskBack.getPixels(pixelsMaskBack, 0, bmpMaskBack.getWidth(), 0, 0, bmpMaskBack.getWidth(), bmpMaskBack.getHeight());
+//
+//                        //just do drawing on bmp original back
+//                        for (int x = 0; x < pixelsMaskBack.length; x++)
+//                        {
+//                            if (pixelsMaskBack[x] == countries.get(j).color && pixelsBack[x] == -4144960)
+//                                pixelsBack[x] = countries.get(j).color;
+//                        }
+////
+////						imgMask.setImageBitmap(bmpMaskBack);
+//                        bmpOriginBack.setPixels(pixelsBack, 0, bmpOriginBack.getWidth(), 0, 0, bmpOriginBack.getWidth(), bmpOriginBack.getWidth());
+//                        imgBack.setImageBitmap(bmpOriginBack);
+////						image1.setImageBitmap(bmpOriginBack);
+//
+//                        break;
+//                    }
+//                }
+//            }
+//        }
     }
 
 }

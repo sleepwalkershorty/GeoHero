@@ -23,4 +23,5 @@
     <string name="dialog_name_title2">Schade</string>
     <string name="bAfrica">Afrika</string>
     <string name="bEurope">Europa</string>
+    <string name="welcome_message">Willkommen beim Geo Hero!\nWähle einen Kontinent!</string>
 </resources>

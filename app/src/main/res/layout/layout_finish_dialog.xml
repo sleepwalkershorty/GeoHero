@@ -39,9 +39,9 @@
         android:text="@string/open_highscores"
         android:id="@+id/bHighscores"
         android:layout_gravity="center_horizontal"
-        android:fontFamily="sans-serif-condensed"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"/>
+        android:layout_marginRight="25dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
 
 </LinearLayout>

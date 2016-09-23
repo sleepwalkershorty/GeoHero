@@ -27,4 +27,5 @@
     <string name="dialog_name_title2">Sorry</string>
     <string name="bEurope">Europe</string>
     <string name="bAfrica">Africa</string>
+    <string name="welcome_message">Welcome to Geo Hero!\nChoose a continent to start!</string>
 </resources>

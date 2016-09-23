@@ -764,6 +764,19 @@ public class MyApplication extends Application
         countries.get(countries.size() - 1).pop_density = 3;
         countries.get(countries.size() - 1).color = -6209531;
 
+        //Burkina Faso is Missing
+        countries.add(new Country());
+        countries.get(countries.size() - 1).id = countries.size() - 1;
+        countries.get(countries.size() - 1).name = "Burkina Faso";
+        countries.get(countries.size() - 1).name_eng = "Burkina Faso";
+        countries.get(countries.size() - 1).abbr = "BFA";
+        countries.get(countries.size() - 1).continent = 1;
+        countries.get(countries.size() - 1).capitol = "Ouagadougou";
+        countries.get(countries.size() - 1).area = 274200;
+        countries.get(countries.size() - 1).population = 16460000;
+        countries.get(countries.size() - 1).pop_density = 60;
+        countries.get(countries.size() - 1).color = -13615953;
+
         countries.add(new Country());
         countries.get(countries.size() - 1).id = countries.size() - 1;
         countries.get(countries.size() - 1).name = "Burundi";

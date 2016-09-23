@@ -40,7 +40,9 @@
             android:name=".ActivityHighscores"
             android:configChanges="orientation|screenSize">
         </activity>
-        <activity android:name=".ActivityStart">
+        <activity
+            android:name=".ActivityStart"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
