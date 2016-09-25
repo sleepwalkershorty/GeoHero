@@ -3,12 +3,16 @@ package de.nrg.geohero;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.media.AudioManager;
+import android.media.SoundPool;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
 import database.DataSource;
+
+import static de.nrg.geohero.ActivityMain.soundIDs;
 
 /**
  * Created by Ich on 12.09.2016.
@@ -19,13 +23,29 @@ public class MyApplication extends Application
     private static final int MAX_POINTS = 100000;
     public static int currentGame = 1;
 
+    //prefs
+    private static boolean playSounds = true;
+
+    //Tools
+    private static SoundPool sPool;
+
     public static ArrayList<Country> countries = new ArrayList<Country>(1);
+
+    public static void playSound(int soundID, float volume)
+    {
+        if (soundID > 0 && playSounds)
+            sPool.play(soundID, 0.60f, 0.60f, 1, 0, 1f);
+    }
 
     @Override
     public void onCreate()
     {
         super.onCreate();
         createSQLiteSession();
+
+        sPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
+        soundIDs.add(sPool.load(this, R.raw.correct3, 1));
+        soundIDs.add(sPool.load(this, R.raw.wrong1, 1));
 
         buildDatabase();
         buildDatabaseNew();

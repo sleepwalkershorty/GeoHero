@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context="de.nrg.geohero.ActivityMain$PlaceholderFragment"
-    >
+                android:background="@drawable/back1">
 
     <LinearLayout
         android:id="@+id/botLay"
@@ -84,8 +84,8 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
-            android:src="@drawable/africa_sat"
-            android:visibility="gone" />
+            android:src="@drawable/africa_sat_new"
+            android:visibility="gone"/>
 
         <de.nrg.geohero.TouchImageView
             android:id="@+id/imageView2"

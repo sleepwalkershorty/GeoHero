@@ -35,6 +35,8 @@ import java.util.Random;
 
 import database.Highscore;
 
+import static de.nrg.geohero.MyApplication.playSound;
+
 public class ActivityMain extends Activity
 {
     private static Bitmap bmpMask, bmpOrigin, bmpOriginBack, bmpMaskBack;
@@ -66,19 +68,9 @@ public class ActivityMain extends Activity
 
     //Sounds
     private static MediaPlayer player;
-    private static SoundPool sPool;
     public static ArrayList<Integer> soundIDs = new ArrayList<Integer>(1);
 
-    //prefs
-    private static boolean playSounds = true;
-
     private static Context ctx;
-
-    private static void playSound(int soundID, float volume)
-    {
-        if (soundID > 0 && ActivityMain.playSounds)
-            sPool.play(soundID, 0.60f, 0.60f, 1, 0, 1f);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -108,10 +100,6 @@ public class ActivityMain extends Activity
         pixelsBack = null;
         bmpMask = null;
         bmpOrigin = null;
-
-        sPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
-        soundIDs.add(sPool.load(this, R.raw.correct3, 1));
-        soundIDs.add(sPool.load(this, R.raw.wrong1, 1));
 
         ArrayList<Integer> backSounds = new ArrayList<Integer>(1);
         backSounds.add(R.raw.back6);
@@ -180,11 +168,6 @@ public class ActivityMain extends Activity
 
     private static void loadInterstitial()
     {
-        // Disable the next level button and load the ad.
-        //mNextLevelButton.setEnabled(false);
-//		AdRequest adRequest = new AdRequest.Builder()
-//				.setRequestAgent("android_studio:ad_template").build();
-
         AdRequest adRequest = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest);
     }
@@ -244,7 +227,7 @@ public class ActivityMain extends Activity
                 imgBack.setImageResource(R.drawable.africa_new);
                 imgMask.setImageResource(R.drawable.africa_new_mask);
                 imgMaskBack.setImageResource(R.drawable.africa_new_mask);
-                imgSatellite.setImageResource(R.drawable.africa_sat);
+                imgSatellite.setImageResource(R.drawable.africa_sat_new);
                 break;
         }
 
@@ -321,6 +304,16 @@ public class ActivityMain extends Activity
             image1.setMaxZoom(10);
             imgMask.setMaxZoom(10);
             imgSatellite.setMaxZoom(10);
+
+            image1.setOnTouchListener(new View.OnTouchListener()
+            {
+                @Override
+                public boolean onTouch(View v, MotionEvent event)
+                {
+                    imgSatellite.setZoom(image1);
+                    return false;
+                }
+            });
 
             image1.setOnDoubleTapListener(new GestureDetector.OnDoubleTapListener()
             {
@@ -450,7 +443,7 @@ public class ActivityMain extends Activity
                         }
                         else
                         {
-                            playSound(soundIDs.get(1), 0.70f);
+                            MyApplication.playSound(soundIDs.get(1), 0.70f);
 
                             errors++;
 

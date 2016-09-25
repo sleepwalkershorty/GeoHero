@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import static de.nrg.geohero.ActivityMain.soundIDs;
+import static de.nrg.geohero.MyApplication.playSound;
+
 public class ActivityStart extends Activity
 {
 
@@ -27,6 +30,7 @@ public class ActivityStart extends Activity
             @Override
             public void onClick(View view)
             {
+                playSound(soundIDs.get(0), 0.67f);
                 MyApplication.currentGame = 1;
                 startActivity(new Intent(ActivityStart.this,ActivityMain.class));
             }
@@ -38,6 +42,7 @@ public class ActivityStart extends Activity
             @Override
             public void onClick(View view)
             {
+                playSound(soundIDs.get(0), 0.67f);
                 MyApplication.currentGame = 2;
                 startActivity(new Intent(ActivityStart.this,ActivityMain.class));
             }
