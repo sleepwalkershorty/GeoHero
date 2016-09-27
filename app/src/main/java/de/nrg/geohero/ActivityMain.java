@@ -51,7 +51,9 @@ public class ActivityMain extends Activity
     private static float downX, downY;
     private final static float SCROLL_THRESHOLD = 10;
     private static long startTime, endTime;
-    private static Thread timeThread;
+    private static Thread timeThread, actionThread;
+    private static long currentActionTime;
+    private static int currentProgress = 1000;
 
     private static TouchImageView image1;
     private static TouchImageView imgMask;
@@ -59,7 +61,7 @@ public class ActivityMain extends Activity
     private static ImageView imgBack;
     private static ImageView imgMaskBack;
     private static TextView tvLoading;
-    private static ProgressBar pbLoading;
+    private static ProgressBar pbLoading, pbAction;
     private static FrameLayout overlay;
 
     private static ArrayList<Country> countries = new ArrayList<Country>(1);
@@ -270,6 +272,42 @@ public class ActivityMain extends Activity
         };
 
         timeThread.start();
+
+        currentActionTime = System.currentTimeMillis();
+
+        actionThread = new Thread()
+        {
+            @Override
+            public void run()
+            {
+                while (true)
+                {
+                    try
+                    {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                        break;
+                    }
+
+                    currentProgress = (int) ((System.currentTimeMillis() - currentActionTime) / 10.);
+                    currentProgress = 1000 - currentProgress;
+
+                    if (currentProgress <= 0)
+                    {
+                        currentProgress = 1000;
+                        currentActionTime = System.currentTimeMillis();
+                    }
+
+                    Message m = new Message();
+                    m.what = 5;
+                    handler.sendMessage(m);
+                }
+            }
+        };
+
+        actionThread.start();
     }
 
     public static class PlaceholderFragment extends Fragment
@@ -298,6 +336,7 @@ public class ActivityMain extends Activity
             imgSatellite = (TouchImageView) rootView.findViewById(R.id.imageView5);
 
             pbLoading = (ProgressBar) rootView.findViewById(R.id.pbLoading);
+            pbAction = (ProgressBar) rootView.findViewById(R.id.pbAction);
             tvLoading = (TextView) rootView.findViewById(R.id.tvLoading);
             overlay = (FrameLayout) rootView.findViewById(R.id.overLay);
 
@@ -417,6 +456,12 @@ public class ActivityMain extends Activity
                                     timeThread = null;
                                 }
 
+                                if (actionThread != null)
+                                {
+                                    actionThread.interrupt();
+                                    actionThread = null;
+                                }
+
                                 endTime = System.currentTimeMillis();
                                 int seconds = (int) ((endTime - startTime) / 1000.);
 
@@ -500,6 +545,12 @@ public class ActivityMain extends Activity
                     mInterstitialAd = newInterstitialAd();
                     loadInterstitial();
                     break;
+                case 5:
+                    if (pbAction != null)
+                    {
+                        pbAction.setProgress(currentProgress);
+                    }
+                    break;
             }
         }
     };
@@ -512,6 +563,12 @@ public class ActivityMain extends Activity
         {
             timeThread.interrupt();
             timeThread = null;
+        }
+
+        if (actionThread != null)
+        {
+            actionThread.interrupt();
+            actionThread = null;
         }
 
         try

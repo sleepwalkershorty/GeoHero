@@ -53,7 +53,7 @@
         android:id="@+id/midLay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/botLay"
+        android:layout_above="@+id/pbAction"
         android:layout_below="@+id/topLine"
         android:orientation="vertical" >
 
@@ -147,6 +147,15 @@
         android:layout_height="2dp"
         android:layout_below="@id/topLay"
         android:background="#33B5E5" />
+
+    <ProgressBar
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pbAction"
+        android:layout_above="@+id/bottomLine"
+        android:max="1000"
+        android:progress="0"/>
 
     <FrameLayout
         android:layout_width="match_parent"

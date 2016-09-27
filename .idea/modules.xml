@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GeoHero.iml" filepath="$PROJECT_DIR$/GeoHero.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geohero.iml" filepath="$PROJECT_DIR$/geohero.iml" />
     </modules>
   </component>
 </project>
