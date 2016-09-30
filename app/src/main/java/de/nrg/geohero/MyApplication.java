@@ -1,14 +1,34 @@
 package de.nrg.geohero;
 
 import android.app.Application;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.AsyncTask;
+import android.util.Pair;
+import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Random;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import database.DataSource;
 
@@ -22,6 +42,7 @@ public class MyApplication extends Application
     private static DataSource datasource;
     private static final int MAX_POINTS = 100000;
     public static int currentGame = 1;
+    private static Context ctx;
 
     //prefs
     private static boolean playSounds = true;
@@ -42,6 +63,8 @@ public class MyApplication extends Application
     {
         super.onCreate();
         createSQLiteSession();
+
+        ctx = this;
 
         sPool = new SoundPool(10, AudioManager.STREAM_MUSIC, 0);
         soundIDs.add(sPool.load(this, R.raw.correct3, 1));
